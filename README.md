@@ -1,4 +1,4 @@
-# apkdignus
+# Aplicativo Mobile
 Um aplicativo que realiza o cadastro de membros de uma igreja, para informar eventos e horários de culto utilizando Python, biblioteca Kivy e banco de dados Firebase.
 ![TRAB](https://github.com/Miguelzan/apkdignus/assets/80460123/13a1eae3-9ea4-4223-b56d-d618d3353c78)
 ![BACK](https://github.com/Miguelzan/apkdignus/assets/80460123/b40b6e1c-4f20-4cf5-aa55-e20b96821d1b)
