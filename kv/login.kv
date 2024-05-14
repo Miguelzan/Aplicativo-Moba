@@ -1,0 +1,67 @@
+<Login>:
+
+#Login
+    FloatLayout:
+        FloatLayout:
+            LabelButton:
+                id:mensagem_login
+                pos_hint:{'right':0.80,'top':0.88}
+                size_hint: 0.60, 0.10
+                text:'FAÇA SEU LOGIN'
+                font_size:20
+                bold: bool
+
+
+
+            TextInput:
+                id:email_input
+                pos_hint:{'right':0.80,'top':0.75}
+                size_hint: 0.60, 0.10
+                hint_text:'Digite seu e-mail'
+                font_size:15
+                bold: bool
+
+
+            TextInput:
+                id:senha_input
+                password:True
+                pos_hint:{'right':0.80,'top':0.60}
+                size_hint: 0.60, 0.10
+                hint_text:'Digite sua senha'
+                font_size:15
+                bold: bool
+
+            ImageButton:
+                pos_hint:{'right':0.85,'top':0.12}
+                size_hint: 0.09, 0.10
+                source:'icones/info.png'
+                bold: bool
+
+
+            #Mudar de tela
+    FloatLayout:
+        pos_hint:{'right':1,'top':0.12}
+        size_hint: 1, 0.12
+
+        ImageButton:
+            pos_hint:{'right':0.20,'top':0.74}
+            size_hint: 0.09, 0.50
+            source:'icones/3.png'
+            on_release: app.mudar_tela('homepage')
+
+    FloatLayout:
+
+        LabelButton:
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                    source:'icones/bf3.png' if self.state == 'normal' else 'icones/bf2.png'
+            pos_hint:{'right':0.69,'top':0.43}
+            size_hint: 0.40, 0.12
+            text:'Fazer login'
+            bold: bool
+            on_release: app.firebase.fazer_login(email_input.text, senha_input.text)
+
+
+

@@ -1,0 +1,77 @@
+<Informe>:
+    FloatLayout:
+        Label:
+            pos_hint:{'right':0.80,'top':1}
+            size_hint: 0.60, 0.10
+            text:'HORÁRIO DOS CULTOS:'
+            font_size:17
+            bold: bool
+        LabelButton:
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                    source:'icones/fundodignus.jpg'
+            pos_hint:{'right':0.80,'top':0.85}
+            size_hint: 0.60, 0.10
+            text: 'DOMINGO 10H / 17H / 19H30'
+            font_size:13
+        LabelButton:
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                    source:'icones/fundodignus.jpg'
+            pos_hint:{'right':0.80,'top':0.70}
+            size_hint: 0.60, 0.10
+            text: 'QUINTA-FEIRA 20H'
+            font_size:13
+
+        Label:
+            pos_hint:{'right':0.80,'top':0.55}
+            size_hint: 0.60, 0.10
+            text:'HORÁRIO DAS CÉLULAS:'
+            font_size:17
+            bold: bool
+        LabelButton:
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                    source:'icones/fundodignus.jpg'
+            pos_hint:{'right':0.80,'top':0.40}
+            size_hint: 0.60, 0.10
+            text: 'TERÇA-FEIRA 20H'
+            font_size:13
+
+
+
+
+
+#Mudar de tela
+    FloatLayout:
+        pos_hint:{'right':1,'top':0.15}
+        size_hint: 1, 0.15
+
+        ImageButton:
+            pos_hint:{'right':0.20,'top':0.60}
+            size_hint: 0.10, 0.38
+            source:'icones/3.png'
+            bold: bool
+            on_release: app.mudar_tela('tela1')
+
+
+        ImageButton:
+            pos_hint:{'right':0.90,'top':0.60}
+            size_hint: 0.12, 0.40
+            source:'icones/2.png'
+            bold: bool
+
+            on_release: app.mudar_tela('tela1')
+
+        ImageButton:
+            pos_hint:{'right':0.55,'top':0.60}
+            size_hint: 0.12, 0.40
+            source:'icones/1.png'
+            bold: bool
+            on_release: app.mudar_tela('tela1')

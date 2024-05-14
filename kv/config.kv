@@ -1,0 +1,98 @@
+<Config>:
+    FloatLayout:
+        FloatLayout:
+
+
+        #Perfil de usuário
+
+        ImageButton:
+            pos_hint:{'right':0.76,'top':1}
+            size_hint: 0.5, 0.30
+            source:'icones/configure.png'
+
+
+
+
+
+        #Botão de alterar foto de perfil
+
+        ImageButton:
+            pos_hint:{'right':0.4,'top':0.60}
+            size_hint: 0.5, 0.08
+            source:'icones/foto_perfil.png'
+            on_release:
+
+        LabelButton:
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                    source:'icones/bf3.png' if self.state == 'normal' else 'icones/bf2.png'
+            pos_hint:{'right':0.76,'top':0.60}
+            size_hint: 0.5, 0.08
+            text: 'Excluir Conta'
+            font_size:13
+            on_release:
+
+
+
+        #Botão de alterar nome do usuário
+
+        ImageButton:
+            pos_hint:{'right':0.4,'top':0.47}
+            size_hint: 0.5, 0.08
+            source:'icones/foto_perfil2.png'
+            on_release:
+
+        LabelButton:
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                    source:'icones/bf3.png' if self.state == 'normal' else 'icones/bf2.png'
+            pos_hint:{'right':0.76,'top':0.47}
+            size_hint: 0.5, 0.08
+            text: 'Alterar nome de usuário'
+            font_size:13
+            on_release:
+
+
+        #Botão de alterar senha
+
+        ImageButton:
+            pos_hint:{'right':0.4,'top':0.33}
+            size_hint: 0.5, 0.08
+            source:'icones/foto_perfil3.png'
+            on_release:
+
+        LabelButton:
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                    source:'icones/bf3.png' if self.state == 'normal' else 'icones/bf2.png'
+            pos_hint:{'right':0.76,'top':0.33}
+            size_hint: 0.5, 0.08
+            text: 'Alterar Senha'
+            font_size:13
+            on_release:
+
+        #Botão de Confirmar e Voltar
+
+        FloatLayout:
+            pos_hint:{'right':1,'top':0.14}
+            size_hint: 1, 0.15
+
+
+
+            ImageButton:
+                pos_hint:{'right':0.95,'top':0.75}
+                size_hint: 0.2, 0.40
+                source:'icones/disco.png'
+
+
+            ImageButton:
+                pos_hint:{'right':0.25,'top':0.75}
+                size_hint: 0.2, 0.40
+                source:'icones/3.png'
+                on_release: app.mudar_tela('tela1')

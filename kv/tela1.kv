@@ -1,0 +1,87 @@
+<Tela1>:
+    FloatLayout:
+        FloatLayout:
+            LabelButton:
+                pos_hint:{'right':0.80,'top':0.90}
+                size_hint: 0.60, 0.10
+                text:'CONECTANDO PESSOAS A JESUS E UNS AOS OUTROS'
+                font_size:13
+                bold: bool
+
+            LabelButton:
+                pos_hint:{'right':0.80,'top':1}
+                size_hint: 0.60, 0.10
+                text:'SEJA BEM VINDO'
+                font_size:35
+                bold: bool
+
+
+            LabelButton:
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source:'icones/bf3.png' if self.state == 'normal' else 'icones/bf2.png'
+                pos_hint:{'right':0.80,'top':0.75}
+                size_hint: 0.60, 0.10
+                text:'INFORMAÇÕES'
+                font_size:10
+                bold: bool
+                on_release: app.mudar_tela('informe')
+
+
+            LabelButton:
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source:'icones/bf3.png' if self.state == 'normal' else 'icones/bf2.png'
+                pos_hint:{'right':0.80,'top':0.64}
+                size_hint: 0.60, 0.10
+                text:'EQUIPE DE TRABALHO'
+                font_size:10
+                bold: bool
+                on_release: app.mudar_tela('equipe_trabalho')
+
+            LabelButton:
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source:'icones/bf3.png' if self.state == 'normal' else 'icones/bf2.png'
+                pos_hint:{'right':0.80,'top':0.53}
+                size_hint: 0.60, 0.10
+                text:'REDES SOCIAIS'
+                font_size:10
+                bold: bool
+
+
+
+
+#Mudar de tela
+    FloatLayout:
+        pos_hint:{'right':1,'top':0.15}
+        size_hint: 1, 0.15
+
+        ImageButton:
+            pos_hint:{'right':0.20,'top':0.60}
+            size_hint: 0.10, 0.38
+            source:'icones/3.png'
+            bold: bool
+            on_release: app.mudar_tela('login')
+
+
+        ImageButton:
+            pos_hint:{'right':0.90,'top':0.60}
+            size_hint: 0.12, 0.40
+            source:'icones/4.png'
+            bold: bool
+
+            on_release: app.mudar_tela('config')
+
+        ImageButton:
+            pos_hint:{'right':0.55,'top':0.60}
+            size_hint: 0.12, 0.40
+            source:'icones/1.png'
+            bold: bool
+            on_release: app.mudar_tela('homepage')

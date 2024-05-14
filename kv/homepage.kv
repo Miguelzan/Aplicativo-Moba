@@ -1,0 +1,34 @@
+<Homepage>:
+    FloatLayout:
+        LabelButton:
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                    source:'icones/bf3.png' if self.state == 'normal' else 'icones/bf2.png'
+            pos_hint:{'right':0.80,'top':0.40}
+            size_hint: 0.60, 0.10
+            text:'CRIAR CONTA'
+            font_size:15
+            bold: bool
+            on_release: app.mudar_tela('registro')
+
+        LabelButton:
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                    source:'icones/bf3.png' if self.state == 'normal' else 'icones/bf2.png'
+            pos_hint:{'right':0.80,'top':0.60}
+            size_hint: 0.60, 0.10
+            text:'LOGIN'
+            font_size:15
+            bold: bool
+            on_release: app.mudar_tela('login')
+
+        Label:
+            pos_hint:{'right':0.80,'top':0.91}
+            size_hint: 0.60, 0.10
+            text:'CONECTE-SE'
+            font_size:40
+            bold: bool

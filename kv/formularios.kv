@@ -1,0 +1,62 @@
+<FORMULARIOS>:
+    FloatLayout:
+        LabelButton:
+            pos_hint:{'right':0.80,'top':1}
+            size_hint: 0.60, 0.10
+            text: 'FORMULÁRIOS:'
+            font_size:17
+            bold:bool
+
+#novos voluntàrios
+        LabelButton:
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                    source:'icones/voluntario.png'
+            pos_hint:{'right':0.80,'top':0.85}
+            size_hint: 0.60, 0.10
+            text: 'NOVOS VOLUNTÁRIOS'
+            font_size:13
+            bold:bool
+
+#grupo de dança
+        LabelButton:
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                    source:'icones/voluntario.png'
+            pos_hint:{'right':0.80,'top':0.70}
+            size_hint: 0.60, 0.10
+            text: 'GRUPO DE DANÇA CORPO'
+            font_size:13
+            bold:bool
+
+
+#Mudar de tela
+    FloatLayout:
+        pos_hint:{'right':1,'top':0.15}
+        size_hint: 1, 0.15
+
+        ImageButton:
+            pos_hint:{'right':0.20,'top':0.60}
+            size_hint: 0.10, 0.38
+            source:'icones/3.png'
+            bold: bool
+            on_release: app.mudar_tela('equipe_trabalho')
+
+
+        ImageButton:
+            pos_hint:{'right':0.90,'top':0.60}
+            size_hint: 0.12, 0.40
+            source:'icones/2.png'
+            bold: bool
+            on_release: app.mudar_tela('formularios')
+
+        ImageButton:
+            pos_hint:{'right':0.55,'top':0.60}
+            size_hint: 0.12, 0.40
+            source:'icones/1.png'
+            bold: bool
+            on_release: app.mudar_tela('tela1')

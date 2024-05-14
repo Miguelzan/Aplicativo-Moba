@@ -1,0 +1,67 @@
+#:include kv/homepage.kv
+#:include kv/login.kv
+#:include kv/registro.kv
+#:include kv/config.kv
+#:include kv/tela1.kv
+#:include kv/informe.kv
+#:include kv/equipe_trabalho.kv
+#:include kv/formularios.kv
+#:import utils kivy.utils
+
+FloatLayout:
+    canvas:
+        Color:
+            rgb:utils.get_color_from_hex('#262b2b')
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Image:
+        pos_hint:{'right':1,'top':1}
+        size_hint: 1, 1
+        source: 'icones/Home1.png'
+
+    ScreenManager:
+        pos_hint:{'right':1,'top':0.7}
+        size_hint: 1, 0.7
+        id: screen_manager
+
+        Homepage:
+            name:'homepage'
+            id:homepage
+
+        Login:
+            name:'login'
+            id:login
+
+        Registro:
+            name:'registro'
+            id:registro
+
+
+        Config:
+            name:'config'
+            id:config
+
+        Tela1:
+            name:'tela1'
+            id: tela1
+
+        Informe:
+            name:'informe'
+            id: informe
+
+        Equipe_trabalho:
+            name:'equipe_trabalho'
+            id: equipe_trabalho
+
+
+        FORMULARIOS:
+            name: 'formularios'
+            id: formularios
+
+
+
+
+
+
+

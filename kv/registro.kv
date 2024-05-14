@@ -1,0 +1,47 @@
+<Registro>:
+    FloatLayout:
+        FloatLayout:
+            LabelButton:
+                id: mensagem_login
+                pos_hint:{'right':0.80,'top':1}
+                size_hint: 0.60, 0.10
+                text:'FAÇA SEU REGISTRO'
+                font_size:15
+                bold: bool
+
+            TextInput:
+                id: email_input
+                pos_hint:{'right':0.80,'top':0.88}
+                size_hint: 0.60, 0.09
+                hint_text:'Digite um e-mail'
+                font_size:15
+
+
+            TextInput:
+                id: senha_input
+                password: True
+                pos_hint:{'right':0.80,'top':0.75}
+                size_hint: 0.60, 0.09
+                hint_text:'Digite uma senha'
+                font_size:15
+
+
+#Mudar de tela
+
+
+    FloatLayout:
+        pos_hint:{'right':1,'top':0.15}
+        size_hint: 1, 0.15
+
+        ImageButton:
+            pos_hint:{'right':0.20,'top':0.70}
+            size_hint: 0.09, 0.42
+            source:'icones/3.png'
+            on_release: app.mudar_tela('homepage')
+
+        ImageButton:
+            id:salva
+            pos_hint:{'right':0.90,'top':0.70}
+            size_hint: 0.09, 0.42
+            source:'icones/disco.png'
+            on_release: app.firebase.criar_conta(email_input.text, senha_input.text)
