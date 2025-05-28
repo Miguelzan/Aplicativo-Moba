@@ -1,6 +1,6 @@
 <h1 align="center">Aplicativo Moba</h1>
 <p align="center">
-  App em Python + Kivy para visualização e organização de campeões de jogos estilo MOBA.
+  App em Python + Kivy para visualização e organização.
 </p>
 
 ---
