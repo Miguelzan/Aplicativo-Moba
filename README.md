@@ -22,7 +22,7 @@
 - Pillow
 
 ---
-| Tela Inicial                                                                                         | Tela de Login                                                                                         | Tela de Informativa                                                                                     |
+| Tela Inicial                                                                                         | Tela de Login                                                                                         | Tela de Informação                                                                                     |
 | ---------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | ![HOME](https://github.com/Miguelzan/apkdignus/assets/80460123/b31c8f11-bbca-441d-ac93-286dfa70475e) | ![LOGIN](https://github.com/Miguelzan/apkdignus/assets/80460123/0e7d6f92-7f8d-46bd-812c-29642330e5ef) | ![INF1](https://github.com/Miguelzan/apkdignus/assets/80460123/9a79a7ac-2073-4872-8cf2-3c940a668633) |
 
