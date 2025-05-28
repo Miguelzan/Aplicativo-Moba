@@ -7,9 +7,6 @@
 
 ## 📱 Funcionalidades
 
-- 🌟 Lista de campeões com imagens
-- 🧠 Visualização de habilidades e descrições
-- 🔍 Filtro por tipo ou função
 - 🎨 Interface customizada com KivyMD
 
 ---
